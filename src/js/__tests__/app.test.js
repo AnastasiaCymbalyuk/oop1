@@ -11,11 +11,17 @@ it('Character', () => {
 });
 
 it('Character', () => {
-  expect(new Character('м', 'Bowman')).toThrow();
+  function checkName() {
+    return new Character('м', 'Bowman');
+  }
+  expect(checkName).toThrow();
 });
 
 it('Character', () => {
-  expect(new Character('мечник1', 15)).toThrow();
+  function checkType() {
+    return new Character('мечник1', 15);
+  }
+  expect(checkType).toThrow();
 });
 
 it('Bowman', () => {
